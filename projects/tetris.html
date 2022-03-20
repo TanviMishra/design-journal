@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <!--window heading-->
+    <title>Tanvi Mishra | Portfolio</title>
+    <link rel="icon" href="https://cdn.glitch.com/ca4864ae-2cec-44d3-ac27-25c0606ac8ff%2FLogoSmall%20copy%202.png?v=1622381987983" />
+     <!--presets-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--link style.css-->
+    <link rel="stylesheet" href="../style.css" /> 
+    <!--link scripts-->
+    <script src="../script.js" defer></script>
+  </head>
+  <!--THESE PICTURES HREF IS FROM CODE 2 PROJECT ASSETS, NOT HERE -->
+  <body>
+    <!--navigation fixed to top of screen-->
+    <div class= "navigation">
+      <div class ="lNav">
+         <h1><a href="../index.html">Tanvi Mishra</a></h1>
+      </div>
+      <div class= "rNav">
+        <h1><a href="../about.html">About</a></h1> 
+        <h1><a href="../resume.html">Resume</a></h1>     
+      </div>
+    </div> 
+    
+    <!--PROJECT PROCESS-->
+    <!--finals-->
+    <div class="projectGrid">
+      
+    <div class="final">
+      <div class="finalFixed">
+        <h1 class="title">Tetris -2.0</h1> <!--Project name-->
+        <div class="fullwidth">       
+           <iframe allow="true" width="400px" height="700px" src="https://editor.p5js.org/TanviMishra/embed/FofmFQ3K6"></iframe>
+        </div>
+        <h4 class="linkButton"><li><a href="https://editor.p5js.org/TanviMishra/embed/FofmFQ3K6">open in editor</a></li></h4>
+      </div>
+    </div>
+    
+    <!--process-->
+    <div class="process">
+      
+      <!--Project Brief-->
+      <h2>Project Brief</h2>
+      <p>
+        Based on an existing project, we had to add an alternative interface that would recontextualize the experience of interacting with that project. 
+        We were expected to interact with the DOM, and use Javascript event handlers in the interface design.
+      </p>
+      
+      <!--Design Process-->
+      <h2>Design Process</h2>
+      <p>
+        In Project 1, I used the word ‘GAME’ to make a pseudo game for the user to play and I really like that idea and the possibilities it provided. 
+        So for my alt-interface, I planned to make a series of games using letterforms that I created and a GUI to allow easy navigation.
+      </p>
+      
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FInitial%20Proposal.png?v=1620695516438" />
+      </div>
+      
+      <p>
+        The first game I tried to recreate was Tetris and I quickly realised that it was a bit more complicated than I anticipated. I first created the 
+        entire ‘typeface’ on illustrator and made sure the proportions would be compatible for the game. For the ease of creation, I limited myself to the only rectangles.
+      </p>
+      
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FInital%20Letterforms.png?v=1620695515715" />
+      </div>
+      
+      <p>
+        The rectangle coordinated (x, y, width, height) of each letter was an object in a letters JSON. I then had to access the JSON while drawing a rectangle. Using a 
+        JSON made it easy to have varying lengths of arrays within it and allow easy access of the same. 
+      </p>
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FObstacle%20Checking.gif?v=1620696631670"/>
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FTetris%20Take%201.gif?v=1620696257503" /> 
+      </div>      
+      
+      <p>
+        All the letter movements and calculations were done in the class letterMovements. However, each object of the class was a rectangle and not a letter (which was formed 
+        from 2-6 rectangles). So, I had to coordinate the positions of the letters outside of the class which was less successful in some cases. For e.g.,  when the letter 
+        hits the sides of the canvas, the rectangles move till all of them are touching the corner. Because of this structure, it became more difficult to perform more complex 
+        interactions like object detection or rotation.
+      </p>
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FmyCanvas-4.jpg?v=1620695510816" /> 
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FmyCanvas%20(7).jpg?v=1620695513694" /> 
+      </div>
+      
+      <p>
+        After some research, I realised that a better way of structuring my letters would be to use matrices instead. Doing so would give me more control over the rotation and 
+        allow for more details in the letter structure. The final letters are formed from a 9x9 matrix. 
+      </p>
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FB.png?v=1620697623417" />
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FX-01.png?v=1620697630216" />
+      </div>
+      
+      <p>
+        The code is also a little more complex, using 3 different classes: box, peice and platform. Each of the classes having a larger number of functions and parameters held within 
+        it (almost like a Matryoshka Doll)
+      </p>
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FUsing%20Matrixes.gif?v=1620696254853" />
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FFin%20Tetris.gif?v=1620697484578"/>
+      </div>
+      <div class="images">
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FmyCanvas%20(15).jpg?v=1620695515470" />
+        <img class ="processImg" src="https://cdn.glitch.com/af29eee8-2b3b-450d-8cf9-d1183e75d636%2FmyCanvas%20(14).jpg?v=1620695513998" />
+      </div>
+      
+      <!--Reflection-->
+      <h2>Reflection</h2>
+      <p>
+        The result is a fully functioning (albeit slightly buggy) version of Tetris that I have called Tetris -2.0 cause it’s more complicated and less satisfying than normal Tetris. 
+        After the proposal of this project I did realise that I had to reduce scope a bit. I also had to reference a lot of other (smarter) people’s code. The result of this is a 
+        frankenstein-d project. <br/>
+        
+        I am quite keen to expand this project further in a few ways: <br/>
+        1. Including more games in letterform (snake game or connect 4) <br/>
+        2. Increasing the complexity of the letterforms to include curves as well. In this project, I am particularly unhappy with the V as it does not match the design of 
+        the other letterforms and would love to fix that. <br/>
+        3. In the Tetris game, provide scope for personalisations in the form of a. Colour, b. Size, and c. Using user-input words as the falling letters.
+      </p>
+      
+      <!--Reference-->
+      <h2>Reference</h2>   
+      <p>
+        <div class="reference"><li><a href="https://github.com/AndreyArguedas/TetrisForFun">TetrisForFun by Andrey Arguedas</a></li></div>
+        <div class="reference"><li><a href="https://www.youtube.com/watch?v=rAUn1Lom6dw">Code Tetris: JavaScript Tutorial for Beginners</a></li></div>
+        <div class="reference"><li><a href="https://www.youtube.com/watch?v=Atlr5vvdchY">Tetris block rotation</a></li></div>
+        <div class="reference"><li><a href="https://editor.p5js.org/ARatherLongUsername/sketches/SkxeigFOX">p5.js Tetris Example</a></li></div>
+      </p>
+    
+      <!--Final link button-->
+      <h4 class="linkButton"><li><a href="https://editor.p5js.org/TanviMishra/collections/gw7y_IRbK">Project Collection</a></li></h4>
+    </div>
+    </div>
+  <!--Footer-->
+  
+  <div class= "footer">
+    <div class= "socials">
+      <p>Give Me attention</p>
+      <a href="https://www.linkedin.com/in/tanvimishra"><img class= "socialslogo" src ="../assets/portfolioAssets/black linkedin.png"/></a>
+      <a href="https://www.behance.net/tanvimishra"><img class= "socialslogo" src ="../assets/portfolioAssets/black behance.png"/></a>
+      <a href="https://www.instagram.com/tanvimishra5786/"><img class= "socialslogo" src ="../assets/portfolioAssets/black insta.png"/></a>
+    </div>
+  </div>
+  </body>
+</html>
