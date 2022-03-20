@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <!--window heading-->
+    <title>Tanvi Mishra | Portfolio</title>
+    <link rel="icon" href="../assets/portfolioAssets/LogoSmall.png" />
+     <!--presets-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--link style.css-->
+    <link rel="stylesheet" href="../style.css" /> 
+    <!--link scripts-->
+    <script src="../script.js" defer></script>
+  </head>
+  
+  <body>
+    <!--navigation fixed to top of screen-->
+    <div class= "navigation">
+      <div class ="lNav">
+         <h1><a href="../index.html">Tanvi Mishra</a></h1>
+      </div>
+      <div class= "rNav">
+        <h1><a href="../about.html">About</a></h1>    
+        <h1><a href="../resume.html">Resume</a></h1>   
+      </div>
+    </div> 
+    
+    <!--PROJECT PROCESS-->
+    <!--finals-->
+    <div class="projectGrid">
+      
+    <div class="final">
+      <div class="finalFixed">
+        <h1 class="title">Q-Sweeper</h1> <!--Project name-->
+        <div class="fullwidth">       
+          <img src="../assets/qSweeper/full_screen.png" width="600" height="600"/>
+        </div>
+        <h4 class="linkButton"><li><a href="https://studio-degen.github.io/q-sweeper/">Play Game</a></li></h4>
+        <h4 class="linkButton"><li><a href="https://github.com/studio-degen/q-sweeper">Github Repos</a></li></h4>
+      </div>
+    </div>
+    
+    <!--process-->
+    <div class="process">
+      
+      <!--Project Brief-->
+      <h2>Project Brief</h2>
+      <p>
+        Q-sweeper stands for quantum minesweeper. The original game is redesigned by applying quantum concepts–noise and entanglement–to it. 
+        The minesweeper maps and mine placement is generated using data from a quantum algorithm. 
+        This project was built as a part of the Quantum Design Jam hosted by The New School in partnership with the IBM Skills Academy and IBM Quantum team 
+        The code is open-source and the game can be played in the browser.
+      </p>
+      
+      <!--Design Process-->
+      <h2>Design Process</h2>
+      <p>
+        We created the maps using Bernstein-Vazirani algorithm, an extension of the Deutch-Jozsa algorithm. The 1024 tiles in our board correspond to 1 out of the 1024 shots taken on the quantum computer. Thus, the map transforms into a visualisation of the data and its associated noise. 
+      </p>
+      <div class="images">
+        <img class ="processImg" src="../assets/qSweeper/noise2.png" />
+        <img class ="processImg" src="../assets/qSweeper/noise4.png" />       
+      </div>
+      <div class="images">
+        <img class ="processImg" src="../assets/qSweeper/noise5.png" />
+        <img class ="processImg" src="../assets/qSweeper/noise6.png" />       
+      </div>
+      <p>
+        The game has two main features: entangled mines and interfering tomatoes. A percentage of the mines are pre-determined to be entangled mines. These mines are interconnected with 2 or 2 other mines. Opening one of these mines will reveal the other mines, but will not end the game. The number of tomatoes are dictated by a percentage of the q-bit data and are placed randomly across the board covering blank and numbered tiles making the game harder for the player.
+      </p>
+      <div class="images">
+        <img class ="processImg" src="../assets/qSweeper/ent1.png" />
+        <img class ="processImg" src="../assets/qSweeper/flag1.png" />       
+      </div>
+      <div class="images">
+        <img class ="processImg" src="../assets/qSweeper/full_screen_blank.png" />
+        <img class ="processImg" src="../assets/qSweeper/full_screen.png" />       
+      </div>
+      
+      <!--Reflection-->
+      <h2>Video Documentation</h2>
+      <p>
+        The game's sound effects were created using the Quantum Music Playground. For a more in-depth explanation and game walkthrough, watch our video here. 
+      </p>
+      <div class="fullwidth">       
+        <!-- <iframe class="video" src="https://youtu.be/8wWyJAOBWls9" width="550" height="484.6875" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8wWyJAOBWls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p>
+        We are further exploring entanglement using socket connections to entangle multiple ongoing games. This project is being set up as an interactive installation that further explores the intersections of games and quantum computing. More details coming soon... 
+      </p>
+      <div class="fullwidth">
+        <img src="../assets/qSweeper/ent2.png" width="600" />   
+      </div>
+      <!--Reference-->
+      <h2>Reference</h2>   
+      <p>
+      <div class="reference"><li><a href="https://qiskit.org">IBM Qiskit Starter Kit</a></li></div>
+      <div class="reference"><li><a href="https://www.ableton.com/en/">Ableton</a></li></div>
+      <div class="reference"><li><a href="https://github.com/JavaFXpert/quantum-music-playground">Quantum Music Playground</a></li></div>
+      <div class="reference"><li><a href="https://editor.p5js.org/codingtrain/sketches/-mz-ePoqd">Reference Minesweeper Project</a></li></div>
+      <div class="reference"><li><a href="https://github.com/mikolajfrohmberg/p5.js-Minesweeper">Reference Flagging Project</a></li></div>
+    </div>
+    </div>
+  <!--Footer-->
+  
+  <div class= "footer">
+    <div class= "socials">
+      <p>Give Me attention</p>
+      <a href="https://www.linkedin.com/in/tanvimishra"><img class= "socialslogo" src ="../assets/portfolioAssets/black linkedin.png"/></a>
+      <a href="https://www.behance.net/tanvimishra"><img class= "socialslogo" src ="../assets/portfolioAssets/black behance.png"/></a>
+      <a href="https://www.instagram.com/tanvimishra5786/"><img class= "socialslogo" src ="../assets/portfolioAssets/black insta.png"/></a>
+    </div>
+  </div>
+  </body>
+</html>
